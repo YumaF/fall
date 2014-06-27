@@ -21,6 +21,7 @@
 		2EAF183B1959645E001E2450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAF181D1959645E001E2450 /* UIKit.framework */; };
 		2EAF18431959645E001E2450 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EAF18411959645E001E2450 /* InfoPlist.strings */; };
 		2EAF18451959645E001E2450 /* fallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF18441959645E001E2450 /* fallTests.m */; };
+		2EAF1850195D73A5001E2450 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF184F195D73A5001E2450 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2EAF18401959645E001E2450 /* fallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fallTests-Info.plist"; sourceTree = "<group>"; };
 		2EAF18421959645E001E2450 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EAF18441959645E001E2450 /* fallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fallTests.m; sourceTree = "<group>"; };
+		2EAF184E195D73A5001E2450 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		2EAF184F195D73A5001E2450 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				2EAF182B1959645E001E2450 /* Main.storyboard */,
 				2EAF182E1959645E001E2450 /* ViewController.h */,
 				2EAF182F1959645E001E2450 /* ViewController.m */,
+				2EAF184E195D73A5001E2450 /* SecondViewController.h */,
+				2EAF184F195D73A5001E2450 /* SecondViewController.m */,
 				2EAF18311959645E001E2450 /* Images.xcassets */,
 				2EAF18201959645E001E2450 /* Supporting Files */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAF1850195D73A5001E2450 /* SecondViewController.m in Sources */,
 				2EAF18301959645E001E2450 /* ViewController.m in Sources */,
 				2EAF182A1959645E001E2450 /* AppDelegate.m in Sources */,
 				2EAF18261959645E001E2450 /* main.m in Sources */,
@@ -456,6 +462,7 @@
 				2EAF184A1959645E001E2450 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EAF184B1959645E001E2450 /* Build configuration list for PBXNativeTarget "fallTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				2EAF184D1959645E001E2450 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
