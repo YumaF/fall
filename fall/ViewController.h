@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SecondViewController.h"
 
 @interface ViewController : UIViewController
 {
+    //落ちてくるラベル
     float speed;
     UILabel *label;
     
@@ -19,8 +19,41 @@
     
     //座標
     float pointY;
+    
+    IBOutlet UILabel *label1;   //問題1
+    IBOutlet UILabel *label2;   //問題2
+    IBOutlet UILabel *label3;   //回答
+    IBOutlet UILabel *seikaiLabel;
+    
+    int number;
+    
+    int question1;
+    int question2;
+    int answer;
 }
 
 -(void)up;
+
+-(IBAction)botton1;
+
+-(IBAction)botton2;
+
+-(IBAction)botton3;
+
+-(IBAction)botton4;
+
+-(IBAction)botton5;
+
+-(IBAction)botton6;
+
+-(IBAction)botton7;
+
+-(IBAction)botton8;
+
+-(IBAction)botton9;
+
+-(IBAction)botton0;
+
+-(IBAction)kaitou;
 
 @end
