@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"10e17fd7.jpg"]];
+
     
     question1 = arc4random_uniform(100);
     question2 = arc4random_uniform(100);
@@ -35,15 +39,19 @@
              ];
     [timer fire];
     
-
     pointY = 50;
     label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 25, pointY, 50, 50)];
     label.text = @"■";
     label.font = [UIFont systemFontOfSize:50];
+    label.textColor = [UIColor whiteColor];
     
     [label setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:label];
+    
+    label1.textColor = [UIColor yellowColor];
+    label2.textColor = [UIColor yellowColor];
+    label3.textColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,9 +66,10 @@
     label.frame = CGRectMake(self.view.frame.size.width/2
                               - 25, pointY, 50, 50);
     
-    if (pointY > 325){
-        SecondViewController *SecondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Second"];
-        [self presentViewController:SecondViewController animated:YES completion:nil];
+    if (pointY > 450){
+        
+        SecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Second"];
+        [self presentViewController:secondViewController animated:YES completion:nil];
     }
 }
 
@@ -127,19 +136,33 @@
         question2 = arc4random_uniform(100);
         answer = question1 + question2;
         number = 0;
-        pointY = pointY -15;
-
+        pointY = pointY -20;
         label1.text = [NSString stringWithFormat:@"%d",question1];
         label2.text = [NSString stringWithFormat:@"%d",question2];
         label3.text = [NSString stringWithFormat:@"%d",number];
         seikaiLabel.text = [NSString stringWithFormat:@"正解！"];
-
+        seikaiLabel.textColor = [UIColor redColor];
+        
+        count = count + 1;
+        number2 = number2 + 100 * count;
+        
+        
     }else{
         number = 0;
         label3.text = [NSString stringWithFormat:@"%d",number];
+        pointY = pointY +10;
         seikaiLabel.text = [NSString stringWithFormat:@"不正解！"];
+        seikaiLabel.textColor = [UIColor blueColor];
+        
+        count = count + 1;
+        number2 = number2 - 50 * count;
         
     }
+}
+
+-(IBAction)sakujo{
+    number = 0;
+    label3.text = [NSString stringWithFormat:@"%d",number];
 }
 
 

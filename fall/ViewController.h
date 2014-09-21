@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+int number;
+int answer;
+
 @interface ViewController : UIViewController
+
 {
     //落ちてくるラベル
     float speed;
@@ -24,12 +28,13 @@
     IBOutlet UILabel *label2;   //問題2
     IBOutlet UILabel *label3;   //回答
     IBOutlet UILabel *seikaiLabel;
-    
-    int number;
+   
     
     int question1;
     int question2;
-    int answer;
+    
+    int count;
+    
 }
 
 -(void)up;
@@ -55,5 +60,7 @@
 -(IBAction)botton0;
 
 -(IBAction)kaitou;
+
+-(IBAction)sakujo;
 
 @end

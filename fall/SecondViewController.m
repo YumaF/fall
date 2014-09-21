@@ -5,8 +5,8 @@
 //  Created by 古家　佑麻　　　　　　　　 on 2014/06/27.
 //  Copyright (c) 2014年 yumafuruya. All rights reserved.
 //
-
 #import "SecondViewController.h"
+#import "ViewController.h"
 
 @interface SecondViewController ()
 
@@ -27,6 +27,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+        
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"building1.jpg"]];
+    
+    scoreLabel.text = [NSString stringWithFormat:@"%d",number2];
+    scoreLabel.textColor = [UIColor yellowColor];
+    score2Label.textColor = [UIColor yellowColor];
+    timeLabel.textColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +55,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
