@@ -7,17 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GADInterstitial.h"
 
 int number2;
 
 
-@interface SecondViewController : UIViewController
-{
+@interface SecondViewController : UIViewController <GADInterstitialDelegate> {
+    GADInterstitial *interstitial_;
+
+
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *timeLabel;
     IBOutlet UILabel *score2Label;
+    IBOutlet UILabel *ratingLabel;
     
     int count;
 }
+
+-(IBAction)oncemore;
+-(IBAction)returntostart;
 
 @end

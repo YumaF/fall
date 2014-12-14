@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#include <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "GADInterstitial.h"
 int number;
 int answer;
 
-@interface ViewController : UIViewController
-
-{
+@interface ViewController : UIViewController <GADInterstitialDelegate> {
+    GADInterstitial *interstitial_;
+    
     //落ちてくるラベル
     float speed;
-    UILabel *label;
+    //UILabel *label;
+    UIView *label;
     
     float time;
     NSTimer *timer;
@@ -34,6 +37,8 @@ int answer;
     int question2;
     
     int count;
+    
+    AVAudioPlayer *audio;
     
 }
 
